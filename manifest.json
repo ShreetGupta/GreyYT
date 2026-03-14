@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "GreyTube",
+  "short_name": "GreyTube",
+  "version": "1.0.0",
+  "description": "YouTube's dark mode, softened. GreyTube swaps the harsh pitch-black UI for a gentle grey theme — easier on your eyes, night or day. Pure CSS, zero JS.",
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "GreyTube is active"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "css": ["theme.css"],
+      "js": ["fullscreen.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
