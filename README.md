@@ -31,9 +31,9 @@ That's it. Open YouTube in dark mode and enjoy the softer look.
 
 ## What it changes
 
-- Main background: `#0f0f0f` → `#1e1e1e`
-- Cards, menus, dropdowns: slightly lighter greys (`#272727`, `#2e2e2e`)
-- Masthead / top nav: `#212121`
+- Main background: `#0f0f0f` → `#1a1a1a`
+- Cards, menus, dropdowns: slightly lighter greys (`#1e1e1e`, `#242424`)
+- Masthead / top nav: `#1f1f1f`
 - Description box, comments, search results — all cohesive
 - Clean fullscreen — no UI bars bleeding over the video
 - Custom styled scrollbars
