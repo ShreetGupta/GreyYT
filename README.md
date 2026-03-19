@@ -21,7 +21,7 @@ Click **Code → Download ZIP** on this page, then unzip it.
 1. Go to `chrome://extensions` or `brave://extensions`
 2. Enable **Developer mode** (toggle in the top-right)
 3. Click **Load unpacked**
-4. Select the unzipped `greytube-v2` folder
+4. Select the unzipped `GreyYT-main` folder
 
 > **Note:** YouTube must be in dark mode. Go to YouTube → profile picture → **Appearance → Dark theme**.
 
