@@ -1,7 +1,6 @@
 /*
   GreyTube — YouTube Grey Theme
-  Replaces pitch black (#0f0f0f) with a soft, warm grey palette.
-  CSS + a small JS content script for fullscreen handling.
+  Darker grey palette + performance-optimized selectors.
 */
 
 /* ─── Core background overrides ─── */
@@ -11,30 +10,30 @@ html[dark] ytd-app,
 html[dark] #content,
 html[dark] ytd-page-manager,
 html[dark] #page-manager {
-  background-color: #1e1e1e !important;
+  background-color: #1a1a1a !important;
 }
 
 /* ─── CSS tokens ─── */
 html[dark] {
-  --yt-spec-base-background:                  #1e1e1e !important;
-  --yt-spec-raised-background:                #272727 !important;
-  --yt-spec-menu-background:                  #2e2e2e !important;
+  --yt-spec-base-background:                  #1a1a1a !important;
+  --yt-spec-raised-background:                #1e1e1e !important;
+  --yt-spec-menu-background:                  #242424 !important;
   --yt-spec-inverted-background:              #e8e8e8 !important;
-  --yt-spec-badge-chip-background:            #3a3a3a !important;
-  --yt-spec-10-percent-background:            rgba(255,255,255,0.08) !important;
-  --yt-spec-static-overlay-background-heavy:  rgba(30,30,30,0.92) !important;
+  --yt-spec-badge-chip-background:            #2e2e2e !important;
+  --yt-spec-10-percent-background:            rgba(255,255,255,0.06) !important;
+  --yt-spec-static-overlay-background-heavy:  rgba(18,18,18,0.92) !important;
   --yt-spec-text-primary:                     #f1f1f1 !important;
   --yt-spec-text-secondary:                   #aaaaaa !important;
   --yt-spec-text-disabled:                    #666666 !important;
-  --yt-spec-outline:                          rgba(255,255,255,0.12) !important;
+  --yt-spec-outline:                          rgba(255,255,255,0.10) !important;
 }
 
 /* ─── Masthead / top nav ─── */
 html[dark] #masthead,
 html[dark] ytd-masthead,
 html[dark] #masthead-container {
-  background-color: #212121 !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.07) !important;
+  background-color: #1f1f1f !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) !important;
 }
 
 /* ─── Fullscreen — hide masthead ─── */
@@ -53,19 +52,19 @@ html[dark] #mini-guide,
 html[dark] ytd-mini-guide-entry-renderer,
 html[dark] tp-yt-app-drawer #contentContainer,
 html[dark] #guide-inner-content {
-  background-color: #1e1e1e !important;
+  background-color: #1a1a1a !important;
 }
 
 html[dark] ytd-mini-guide-entry-renderer:hover,
 html[dark] ytd-mini-guide-entry-renderer[is-selected] {
-  background-color: #2e2e2e !important;
+  background-color: #242424 !important;
 }
 
 /* ─── Video cards & shelf backgrounds ─── */
 html[dark] ytd-rich-grid-renderer,
 html[dark] ytd-browse,
 html[dark] ytd-two-column-browse-results-renderer {
-  background-color: #1e1e1e !important;
+  background-color: #1a1a1a !important;
 }
 
 html[dark] ytd-video-renderer,
@@ -77,7 +76,7 @@ html[dark] ytd-grid-video-renderer {
 /* Thumbnail card hover */
 html[dark] ytd-rich-item-renderer:hover,
 html[dark] ytd-video-renderer:hover {
-  background-color: #2a2a2a !important;
+  background-color: #262626 !important;
   border-radius: 12px;
 }
 
@@ -85,26 +84,26 @@ html[dark] ytd-video-renderer:hover {
 html[dark] ytd-watch-flexy,
 html[dark] #secondary,
 html[dark] #primary {
-  background-color: #1e1e1e !important;
+  background-color: #1a1a1a !important;
 }
 
 html[dark] #info-contents,
 html[dark] ytd-video-primary-info-renderer,
 html[dark] ytd-video-secondary-info-renderer {
-  background-color: #1e1e1e !important;
+  background-color: #1a1a1a !important;
 }
 
 /* ─── Comments ─── */
 html[dark] ytd-comments,
 html[dark] ytd-comment-thread-renderer,
 html[dark] ytd-comment-renderer {
-  background-color: #1e1e1e !important;
+  background-color: #1a1a1a !important;
 }
 
 /* ─── Search results ─── */
 html[dark] ytd-search,
 html[dark] ytd-section-list-renderer {
-  background-color: #1e1e1e !important;
+  background-color: #1a1a1a !important;
 }
 
 /* ─── Dropdowns / menus / popups ─── */
@@ -113,8 +112,8 @@ html[dark] ytd-popup-container,
 html[dark] ytd-menu-popup-renderer,
 html[dark] tp-yt-iron-dropdown .dropdown-content,
 html[dark] ytd-multi-page-menu-renderer {
-  background-color: #2e2e2e !important;
-  border: 1px solid rgba(255,255,255,0.08) !important;
+  background-color: #242424 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
 }
 
 /* ─── Chip bar container ─── */
@@ -123,7 +122,7 @@ html[dark] yt-chip-cloud-renderer,
 html[dark] #chips-wrapper,
 html[dark] #chips,
 html[dark] ytd-chip-cloud-renderer #chips {
-  background-color: #1e1e1e !important;
+  background-color: #1a1a1a !important;
 }
 
 /* ─── Chips — unselected ─── */
@@ -131,15 +130,15 @@ html[dark] yt-chip-cloud-chip-renderer,
 html[dark] ytd-chip-cloud-chip-renderer,
 html[dark] yt-chip-cloud-chip-renderer .chip-container,
 html[dark] yt-chip-cloud-chip-renderer yt-formatted-string {
-  background-color: #2e2e2e !important;
-  border-color: rgba(255,255,255,0.12) !important;
+  background-color: #242424 !important;
+  border-color: rgba(255,255,255,0.10) !important;
   color: #e0e0e0 !important;
 }
 
 /* ─── Chip hover ─── */
 html[dark] yt-chip-cloud-chip-renderer:hover,
 html[dark] ytd-chip-cloud-chip-renderer:hover {
-  background-color: #3a3a3a !important;
+  background-color: #2e2e2e !important;
 }
 
 /* ─── Chip selected ─── */
@@ -149,21 +148,21 @@ html[dark] yt-chip-cloud-chip-renderer[selected] .chip-container,
 html[dark] yt-chip-cloud-chip-renderer[selected] yt-formatted-string {
   background-color: #e8e8e8 !important;
   border-color: transparent !important;
-  color: #1e1e1e !important;
+  color: #1a1a1a !important;
 }
 
 /* ─── Chip scroll arrows ─── */
 html[dark] #chips-wrapper .arrow-button,
 html[dark] ytd-feed-filter-chip-bar-renderer .arrow {
-  background-color: #1e1e1e !important;
+  background-color: #1a1a1a !important;
 }
 
 /* ─── Search box ─── */
 html[dark] #search-input,
 html[dark] ytd-searchbox,
 html[dark] #search input {
-  background-color: #2a2a2a !important;
-  border-color: rgba(255,255,255,0.15) !important;
+  background-color: #262626 !important;
+  border-color: rgba(255,255,255,0.12) !important;
 }
 
 /* ─── Description box ─── */
@@ -176,7 +175,7 @@ html[dark] #description.ytd-watch-metadata,
 html[dark] ytd-watch-metadata #description,
 html[dark] #info-contents ytd-text-inline-expander,
 html[dark] ytd-attributed-string[ellipsis-truncated] {
-  background-color: #272727 !important;
+  background-color: #1e1e1e !important;
   border-radius: 12px !important;
 }
 
@@ -187,29 +186,48 @@ html[dark] ytd-text-inline-expander #content,
 html[dark] ytd-text-inline-expander #description-inline-expander,
 html[dark] tp-yt-paper-button#expand,
 html[dark] yt-formatted-string.ytd-text-inline-expander {
-  background-color: #272727 !important;
+  background-color: #1e1e1e !important;
 }
 
 /* ─── Playlist panel ─── */
 html[dark] ytd-playlist-panel-renderer,
 html[dark] #playlist-action-menu {
-  background-color: #212121 !important;
+  background-color: #1f1f1f !important;
 }
 
 /* ─── Settings / account pages ─── */
 html[dark] ytd-account-settings-renderer,
 html[dark] ytd-settings-renderer {
-  background-color: #1e1e1e !important;
+  background-color: #1a1a1a !important;
 }
 
 /* ─── Scrollbar ─── */
 html[dark] ::-webkit-scrollbar-track {
-  background: #1e1e1e !important;
+  background: #1a1a1a !important;
 }
 html[dark] ::-webkit-scrollbar-thumb {
-  background: #3d3d3d !important;
+  background: #333333 !important;
   border-radius: 4px;
 }
 html[dark] ::-webkit-scrollbar-thumb:hover {
-  background: #505050 !important;
+  background: #444444 !important;
+}
+
+/* ─── Performance: compositor hints to reduce scroll repaints ─── */
+html[dark] ytd-rich-item-renderer,
+html[dark] ytd-video-renderer,
+html[dark] ytd-compact-video-renderer {
+  contain: layout style !important;
+}
+
+html[dark] #masthead-container {
+  will-change: transform;
+  contain: layout style paint !important;
+}
+
+html[dark] ytd-thumbnail,
+html[dark] ytd-thumbnail img {
+  will-change: auto;
+  contain: layout paint !important;
+  transform: translateZ(0);
 }

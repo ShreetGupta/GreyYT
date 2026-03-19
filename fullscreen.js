@@ -1,5 +1,5 @@
-// GreyTube — fullscreen bar remover
-// Hides ytd-popup-container during fullscreen and restores it on exit
+// GreyTube — fullscreen bar handler
+// Uses fullscreenchange event instead of MutationObserver — zero scroll overhead
 
 function handleFullscreen() {
   const isFullscreen = !!(
@@ -16,14 +16,14 @@ function handleFullscreen() {
     }
   });
 
-  // Always remove permission bar regardless of fullscreen state
   document.querySelectorAll('ytd-permission-role-bottom-bar-renderer').forEach(el => el.remove());
 }
 
-handleFullscreen();
+// Fire on actual fullscreen transitions only — not on every DOM change
+document.addEventListener('fullscreenchange', handleFullscreen);
+document.addEventListener('webkitfullscreenchange', handleFullscreen);
 
-// Watch for DOM changes (fullscreen enter/exit, SPA navigation)
-new MutationObserver(handleFullscreen).observe(document.documentElement, {
-  childList: true,
-  subtree: true
-});
+// Also handle YouTube's SPA navigation (page changes without reload)
+document.addEventListener('yt-navigate-finish', handleFullscreen);
+
+handleFullscreen();
