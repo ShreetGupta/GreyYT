@@ -4,13 +4,13 @@
 
 > YouTube's dark mode, softened.
 
-GreyTube replaces YouTube's harsh pitch-black background with a calm, easy-on-the-eyes grey theme. Lightweight CSS theme with a tiny JS script for clean fullscreen — under 20 KB total.
+GreyTube replaces YouTube's harsh pitch-black background with a calm, easy-on-the-eyes grey theme. Pure CSS background overrides — nothing else is touched. The player, buttons, thumbnails, and description all look exactly as YouTube intends.
 
 ---
 
 ## Install
 
-Since this extension isn't on the Chrome Web Store, you load it manually in two steps:
+Since this extension isn't on the Chrome Web Store, you load it manually:
 
 ### 1. Download
 
@@ -18,32 +18,27 @@ Click **Code → Download ZIP** on this page, then unzip it.
 
 ### 2. Load in Chrome / Brave
 
-1. Open Chrome/Brave and go to `chrome://extensions` or `brave://extensions`
+1. Go to `chrome://extensions` or `brave://extensions`
 2. Enable **Developer mode** (toggle in the top-right)
 3. Click **Load unpacked**
-4. Select the unzipped `yt-grey-theme` folder
+4. Select the unzipped `greytube-v2` folder
 
-That's it. Open YouTube in dark mode and enjoy the softer look.
-
-> **Note:** YouTube must be in dark mode. Go to YouTube → your profile picture → **Appearance → Dark theme**.
+> **Note:** YouTube must be in dark mode. Go to YouTube → profile picture → **Appearance → Dark theme**.
 
 ---
 
 ## What it changes
 
-- Main background: `#0f0f0f` → `#1a1a1a`
-- Cards, menus, dropdowns: slightly lighter greys (`#1e1e1e`, `#242424`)
-- Masthead / top nav: `#1f1f1f`
-- Description box, comments, search results — all cohesive
-- Clean fullscreen — no UI bars bleeding over the video
-- Custom styled scrollbars
-- No flash of black — CSS injects at `document_start`
+- Page background: `#0f0f0f` → `#1c1c1c`
+- Nav, sidebar, menus: matching grey palette
+- Fullscreen: no UI bars bleeding over the video
+- Everything else — player, thumbnails, buttons, description — **untouched**
 
 ---
 
 ## Updating
 
-When YouTube breaks something, fix the selector in `theme.css` or `fullscreen.js`, bump the version in `manifest.json`, and reload the extension on `chrome://extensions`.
+Fix a selector in `theme.css`, bump the version in `manifest.json`, reload the extension on `chrome://extensions`.
 
 ---
 

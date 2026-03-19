@@ -1,233 +1,98 @@
 /*
-  GreyTube — YouTube Grey Theme
-  Darker grey palette + performance-optimized selectors.
+  GreyTube v2 — Pure grey UI
+  Only touches background colours. Nothing else.
 */
 
-/* ─── Core background overrides ─── */
-html[dark],
+/* ── YouTube's own CSS variables ── */
+html[dark] {
+  --yt-spec-base-background:             #1c1c1c !important;
+  --yt-spec-raised-background:           #262626 !important;
+  --yt-spec-menu-background:             #262626 !important;
+  --yt-spec-badge-chip-background:       #2e2e2e !important;
+  --yt-spec-10-percent-background:       rgba(255,255,255,0.08) !important;
+  --yt-spec-static-overlay-background-heavy: rgba(30,30,30,0.9) !important;
+}
+
+/* ── Page shell ── */
 html[dark] body,
 html[dark] ytd-app,
-html[dark] #content,
-html[dark] ytd-page-manager,
-html[dark] #page-manager {
-  background-color: #1a1a1a !important;
+html[dark] #page-manager,
+html[dark] ytd-page-manager {
+  background: #1c1c1c !important;
 }
 
-/* ─── CSS tokens ─── */
-html[dark] {
-  --yt-spec-base-background:                  #1a1a1a !important;
-  --yt-spec-raised-background:                #1e1e1e !important;
-  --yt-spec-menu-background:                  #242424 !important;
-  --yt-spec-inverted-background:              #e8e8e8 !important;
-  --yt-spec-badge-chip-background:            #2e2e2e !important;
-  --yt-spec-10-percent-background:            rgba(255,255,255,0.06) !important;
-  --yt-spec-static-overlay-background-heavy:  rgba(18,18,18,0.92) !important;
-  --yt-spec-text-primary:                     #f1f1f1 !important;
-  --yt-spec-text-secondary:                   #aaaaaa !important;
-  --yt-spec-text-disabled:                    #666666 !important;
-  --yt-spec-outline:                          rgba(255,255,255,0.10) !important;
+/* ── Top navigation bar ── */
+html[dark] #masthead-container,
+html[dark] ytd-masthead {
+  background: #1c1c1c !important;
 }
 
-/* ─── Masthead / top nav ─── */
-html[dark] #masthead,
-html[dark] ytd-masthead,
-html[dark] #masthead-container {
-  background-color: #1f1f1f !important;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.06) !important;
+/* ── Left sidebar ── */
+html[dark] tp-yt-app-drawer,
+html[dark] #contentContainer,
+html[dark] ytd-guide-renderer,
+html[dark] ytd-mini-guide-renderer {
+  background: #1c1c1c !important;
 }
 
-/* ─── Fullscreen — hide masthead ─── */
-ytd-app[is-fullscreen] #masthead-container,
-ytd-app[is-fullscreen] #masthead,
-ytd-app[is-fullscreen] ytd-masthead,
-ytd-watch-flexy[fullscreen] #masthead-container,
-ytd-watch-flexy[fullscreen] #masthead,
-ytd-watch-flexy[fullscreen] ytd-masthead {
-  display: none !important;
-}
-
-/* ─── Mini guide (collapsed left sidebar) ─── */
-html[dark] ytd-mini-guide-renderer,
-html[dark] #mini-guide,
-html[dark] ytd-mini-guide-entry-renderer,
-html[dark] tp-yt-app-drawer #contentContainer,
-html[dark] #guide-inner-content {
-  background-color: #1a1a1a !important;
-}
-
-html[dark] ytd-mini-guide-entry-renderer:hover,
-html[dark] ytd-mini-guide-entry-renderer[is-selected] {
-  background-color: #242424 !important;
-}
-
-/* ─── Video cards & shelf backgrounds ─── */
-html[dark] ytd-rich-grid-renderer,
+/* ── Home / browse page ── */
 html[dark] ytd-browse,
-html[dark] ytd-two-column-browse-results-renderer {
-  background-color: #1a1a1a !important;
+html[dark] ytd-two-column-browse-results-renderer,
+html[dark] ytd-rich-grid-renderer {
+  background: #1c1c1c !important;
 }
 
-html[dark] ytd-video-renderer,
-html[dark] ytd-compact-video-renderer,
-html[dark] ytd-grid-video-renderer {
-  background-color: transparent !important;
-}
-
-/* Thumbnail card hover */
-html[dark] ytd-rich-item-renderer:hover,
-html[dark] ytd-video-renderer:hover {
-  background-color: #262626 !important;
-  border-radius: 12px;
-}
-
-/* ─── Watch page ─── */
+/* ── Watch page ── */
 html[dark] ytd-watch-flexy,
+html[dark] #primary,
 html[dark] #secondary,
-html[dark] #primary {
-  background-color: #1a1a1a !important;
+html[dark] #primary-inner,
+html[dark] #secondary-inner {
+  background: #1c1c1c !important;
 }
 
-html[dark] #info-contents,
+/* ── Below video: title, info ── */
 html[dark] ytd-video-primary-info-renderer,
-html[dark] ytd-video-secondary-info-renderer {
-  background-color: #1a1a1a !important;
+html[dark] ytd-video-secondary-info-renderer,
+html[dark] ytd-watch-metadata {
+  background: #1c1c1c !important;
 }
 
-/* ─── Comments ─── */
+/* ── Comments ── */
 html[dark] ytd-comments,
 html[dark] ytd-comment-thread-renderer,
 html[dark] ytd-comment-renderer {
-  background-color: #1a1a1a !important;
+  background: #1f1f1f !important;
 }
 
-/* ─── Search results ─── */
+/* ── Search results ── */
 html[dark] ytd-search,
 html[dark] ytd-section-list-renderer {
-  background-color: #1a1a1a !important;
+  background: #1f1f1f !important;
 }
 
-/* ─── Dropdowns / menus / popups ─── */
-html[dark] tp-yt-paper-dialog,
-html[dark] ytd-popup-container,
+/* ── Menus and dropdowns ── */
 html[dark] ytd-menu-popup-renderer,
-html[dark] tp-yt-iron-dropdown .dropdown-content,
-html[dark] ytd-multi-page-menu-renderer {
-  background-color: #242424 !important;
-  border: 1px solid rgba(255,255,255,0.07) !important;
+html[dark] ytd-multi-page-menu-renderer,
+html[dark] tp-yt-paper-dialog,
+html[dark] tp-yt-iron-dropdown .dropdown-content {
+  background: #282828 !important;
 }
 
-/* ─── Chip bar container ─── */
+/* ── Filter chips bar ── */
 html[dark] ytd-feed-filter-chip-bar-renderer,
-html[dark] yt-chip-cloud-renderer,
-html[dark] #chips-wrapper,
-html[dark] #chips,
-html[dark] ytd-chip-cloud-renderer #chips {
-  background-color: #1a1a1a !important;
+html[dark] yt-chip-cloud-renderer {
+  background: #1f1f1f !important;
 }
 
-/* ─── Chips — unselected ─── */
-html[dark] yt-chip-cloud-chip-renderer,
-html[dark] ytd-chip-cloud-chip-renderer,
-html[dark] yt-chip-cloud-chip-renderer .chip-container,
-html[dark] yt-chip-cloud-chip-renderer yt-formatted-string {
-  background-color: #242424 !important;
-  border-color: rgba(255,255,255,0.10) !important;
-  color: #e0e0e0 !important;
-}
-
-/* ─── Chip hover ─── */
-html[dark] yt-chip-cloud-chip-renderer:hover,
-html[dark] ytd-chip-cloud-chip-renderer:hover {
-  background-color: #2e2e2e !important;
-}
-
-/* ─── Chip selected ─── */
-html[dark] yt-chip-cloud-chip-renderer[chip-style="STYLE_HOME_FILTER"][selected],
-html[dark] ytd-chip-cloud-chip-renderer[selected],
-html[dark] yt-chip-cloud-chip-renderer[selected] .chip-container,
-html[dark] yt-chip-cloud-chip-renderer[selected] yt-formatted-string {
-  background-color: #e8e8e8 !important;
-  border-color: transparent !important;
-  color: #1a1a1a !important;
-}
-
-/* ─── Chip scroll arrows ─── */
-html[dark] #chips-wrapper .arrow-button,
-html[dark] ytd-feed-filter-chip-bar-renderer .arrow {
-  background-color: #1a1a1a !important;
-}
-
-/* ─── Search box ─── */
-html[dark] #search-input,
-html[dark] ytd-searchbox,
-html[dark] #search input {
-  background-color: #262626 !important;
-  border-color: rgba(255,255,255,0.12) !important;
-}
-
-/* ─── Description box ─── */
-html[dark] ytd-expandable-video-description-body-renderer,
-html[dark] ytd-text-inline-expander,
-html[dark] ytd-structured-description-content-renderer,
-html[dark] ytd-video-description-transcript-section-renderer,
-html[dark] #description-inline-expander,
-html[dark] #description.ytd-watch-metadata,
-html[dark] ytd-watch-metadata #description,
-html[dark] #info-contents ytd-text-inline-expander,
-html[dark] ytd-attributed-string[ellipsis-truncated] {
-  background-color: #1e1e1e !important;
-  border-radius: 12px !important;
-}
-
-html[dark] #bottom-row ytd-text-inline-expander,
-html[dark] ytd-watch-metadata #expand,
-html[dark] #meta ytd-text-inline-expander,
-html[dark] ytd-text-inline-expander #content,
-html[dark] ytd-text-inline-expander #description-inline-expander,
-html[dark] tp-yt-paper-button#expand,
-html[dark] yt-formatted-string.ytd-text-inline-expander {
-  background-color: #1e1e1e !important;
-}
-
-/* ─── Playlist panel ─── */
-html[dark] ytd-playlist-panel-renderer,
-html[dark] #playlist-action-menu {
-  background-color: #1f1f1f !important;
-}
-
-/* ─── Settings / account pages ─── */
-html[dark] ytd-account-settings-renderer,
-html[dark] ytd-settings-renderer {
-  background-color: #1a1a1a !important;
-}
-
-/* ─── Scrollbar ─── */
+/* ── Scrollbar ── */
 html[dark] ::-webkit-scrollbar-track {
-  background: #1a1a1a !important;
+  background: #1f1f1f !important;
 }
 html[dark] ::-webkit-scrollbar-thumb {
-  background: #333333 !important;
+  background: #3a3a3a !important;
   border-radius: 4px;
 }
 html[dark] ::-webkit-scrollbar-thumb:hover {
-  background: #444444 !important;
-}
-
-/* ─── Performance: compositor hints to reduce scroll repaints ─── */
-html[dark] ytd-rich-item-renderer,
-html[dark] ytd-video-renderer,
-html[dark] ytd-compact-video-renderer {
-  contain: layout style !important;
-}
-
-html[dark] #masthead-container {
-  will-change: transform;
-  contain: layout style paint !important;
-}
-
-html[dark] ytd-thumbnail,
-html[dark] ytd-thumbnail img {
-  will-change: auto;
-  contain: layout paint !important;
-  transform: translateZ(0);
+  background: #484848 !important;
 }
