@@ -21,15 +21,9 @@ Click **Code → Download ZIP** on this page, then unzip it.
 1. Go to `chrome://extensions` or `brave://extensions`
 2. Enable **Developer mode** (toggle in the top-right)
 3. Click **Load unpacked**
-4. Select the unzipped `GreyYT-main` folder
+4. Select the unzipped `greytube-v2` folder
 
 > **Note:** YouTube must be in dark mode. Go to YouTube → profile picture → **Appearance → Dark theme**.
-
----
-
-## Important note
-
-👉 Sideloaded extensions require the files to be remain at the same path, So don't delete the folder after loading the extension or extension will get removed.
 
 ---
 

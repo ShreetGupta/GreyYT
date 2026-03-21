@@ -96,3 +96,39 @@ html[dark] ::-webkit-scrollbar-thumb {
 html[dark] ::-webkit-scrollbar-thumb:hover {
   background: #484848 !important;
 }
+
+/* ── SideComments integration ── */
+/* The sc-comments card uses --yt-spec-base-background via --sc-surface.
+   We just make sure the card, its sticky header, and inner elements
+   all match GreyTube's grey consistently. */
+
+html[dark] #comments.sc-comments {
+  background: #1c1c1c !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+html[dark] #comments.sc-comments ytd-comments-header-renderer {
+  background: #1c1c1c !important;
+}
+
+html[dark] #comments.sc-comments ytd-comment-thread-renderer,
+html[dark] #comments.sc-comments ytd-comment-renderer {
+  background: #1c1c1c !important;
+}
+
+/* Scrollbar inside sc-comments card */
+html[dark] #comments.sc-comments::-webkit-scrollbar-track {
+  background: #1c1c1c !important;
+}
+html[dark] #comments.sc-comments::-webkit-scrollbar-thumb {
+  background: #3a3a3a !important;
+  border-radius: 99px;
+}
+
+/* Secondary sidebar scroll area */
+html[dark].sc-active #secondary {
+  background: #1c1c1c !important;
+}
+html[dark].sc-active #secondary::-webkit-scrollbar-track {
+  background: #1c1c1c !important;
+}
