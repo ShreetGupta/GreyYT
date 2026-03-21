@@ -27,6 +27,12 @@ Click **Code → Download ZIP** on this page, then unzip it.
 
 ---
 
+## Important note
+
+👉 Sideloaded extensions require the files to be remain at the same path, So don't delete the folder after loading the extension or extension will get removed.
+
+---
+
 ## What it changes
 
 - Page background: `#0f0f0f` → `#1c1c1c`
